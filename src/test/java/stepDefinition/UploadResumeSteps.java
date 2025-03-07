@@ -37,14 +37,14 @@ public void user_navigates_to_the_resume_upload_section() {
 
 @When("User uploads the resume file")
 public void user_uploads_the_resume_file() {
-    WebElement upload = driver.findElement(By.xpath("//a[contains(text(),'Update')]"));
-    upload.sendKeys("C:\\Users\\91849\\Documents\\Supriya_V_Resume.pdf");
+	 WebElement uploadElement = driver.findElement(By.xpath("//input[@type='file' and @id='attachCV']"));
+     uploadElement.sendKeys("C:\\Users\\91849\\Documents\\Suppa 2.0\\GrowSkills\\Supriya_V_Resume.pdf");
 }
 
 @Then("Resume should be uploaded successfully")
 public void resume_should_be_uploaded_successfully() {
 	 System.out.println("Resume uploaded successfully!");
-     driver.quit();
+//     driver.quit();
 }
 
 }
