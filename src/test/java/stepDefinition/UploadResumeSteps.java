@@ -44,7 +44,7 @@ public void user_uploads_the_resume_file() {
 @Then("Resume should be uploaded successfully")
 public void resume_should_be_uploaded_successfully() {
 	 System.out.println("Resume uploaded successfully!");
-//     driver.quit();
+     driver.quit();
 }
 
 }
