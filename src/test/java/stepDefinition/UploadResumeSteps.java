@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -24,8 +25,8 @@ public void user_is_on_naukri_login_page() {
 }
 
 @When("User logs in with valid credentials")
-public void user_logs_in_with_valid_credentials() {
-
+public void user_logs_in_with_valid_credentials() throws InterruptedException {
+     Thread.sleep(5000);
     driver.findElement(By.id("login_Layer")).click();
     driver.findElement(By.xpath("//input[contains(@placeholder,'Email')]")).sendKeys("supriya.v.prof@gmail.com");
     driver.findElement(By.xpath("//input[contains(@placeholder,'pass')]")).sendKeys("Naukri2025$");
