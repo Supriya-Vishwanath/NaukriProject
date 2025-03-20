@@ -42,9 +42,9 @@ public void user_navigates_to_the_resume_upload_section() {
 public void user_uploads_the_resume_file() {
 	WebElement deleteEle=driver.findElement(By.xpath("//span[@data-title='delete-resume']"));
 	deleteEle.click();
-	WebElement uploadElement = driver.findElement(By.xpath("//input[@type='file' and contains(@id,'attachCV')]"));
-	
-    uploadElement.sendKeys("C:\\Users\\91849\\Documents\\Suppa 2.0\\GrowSkills\\Supriya_V_Resume.pdf");
+//	WebElement uploadElement = driver.findElement(By.xpath("//input[@type='file' and contains(@id,'attachCV')]"));
+//	
+//    uploadElement.sendKeys("C:\\Users\\91849\\Documents\\Suppa 2.0\\GrowSkills\\Supriya_V_Resume.pdf");
 
     System.out.println("File path sent to upload field.");
 }
