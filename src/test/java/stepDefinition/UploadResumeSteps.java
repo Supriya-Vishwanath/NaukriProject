@@ -2,11 +2,11 @@ package stepDefinition;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -42,6 +42,8 @@ public void user_navigates_to_the_resume_upload_section() {
 public void user_uploads_the_resume_file() {
 	WebElement deleteEle=driver.findElement(By.xpath("//span[@data-title='delete-resume']"));
 	deleteEle.click();
+	WebElement confirm=driver.findElement(By.xpath("//div[@class='action right-align']/following::button"));
+	confirm.click();
 //	WebElement uploadElement = driver.findElement(By.xpath("//input[@type='file' and contains(@id,'attachCV')]"));
 //	
 //    uploadElement.sendKeys("C:\\Users\\91849\\Documents\\Suppa 2.0\\GrowSkills\\Supriya_V_Resume.pdf");
@@ -54,7 +56,7 @@ public void resume_should_be_uploaded_successfully() throws InterruptedException
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@title='Supriya_V_Resume.pdf']")));
 	 System.out.println("Resume uploaded successfully!");
-     driver.quit();
+//     driver.quit();
 }
 
 }
